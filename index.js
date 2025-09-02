@@ -6,9 +6,14 @@ const para=document.getElementById('para')
 function ageCalculator(){
     console.log(new Date(dob.value).getFullYear())
     console.log(new Date().getFullYear())
-
+    if(!dob.value)
+    {
+    alert("enter the DOB")
+    return
+    }
     const age=new Date().getFullYear() - new Date(dob.value).getFullYear();
     console.log(age);
+    
     para.innerHTML=`You are ${age} year old`
 }
 
